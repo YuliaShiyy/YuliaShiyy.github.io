@@ -6,132 +6,198 @@
   <title>Yan Shi | Portfolio</title>
   <style>
     body {
-      font-family: "Inter", sans-serif;
       margin: 0;
-      background: #f9fafb;
-      color: #333;
-      line-height: 1.6;
+      font-family: "Inter", sans-serif;
+      background-color: #0f1115;
+      color: #f0f0f0;
     }
     header {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      background-color: #1a1d23;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 1.4rem;
+      color: #ffffff;
     }
-    header p {
-      margin-top: 0.5rem;
-      color: #94a3b8;
+    nav a {
+      margin-left: 1.5rem;
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
     }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    nav a:hover {
+      color: #fff;
     }
-    h2 {
-      color: #1e293b;
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 0.3rem;
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, #181b22, #0f1115);
     }
-    .project {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .hero p {
+      color: #b0b0b0;
+      font-size: 1.1rem;
       margin-bottom: 1.5rem;
     }
-    .project h3 {
+    .links a {
+      margin: 0 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .links a:hover {
+      background: #333;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #1a1d23;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h4 {
       margin-top: 0;
-      color: #0f172a;
+      color: #fff;
     }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .card p {
+      color: #b0b0b0;
+      font-size: 0.95rem;
+      line-height: 1.4rem;
     }
-    .skill {
-      background: #e2e8f0;
-      color: #0f172a;
-      padding: 4px 10px;
-      border-radius: 8px;
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      background: #2563eb;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
       font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .card a:hover {
+      background: #1e4db7;
+    }
+
+    .about {
+      line-height: 1.6;
+      color: #ddd;
+    }
+    .about h4 {
+      color: #fff;
     }
     footer {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem;
+      border-top: 1px solid #333;
+      color: #888;
       font-size: 0.9rem;
-      color: #64748b;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Yan Shi</h1>
-    <p>Data Engineer | Data Analyst | Stockholm, Sweden</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I'm a data enthusiast with a background in Strategic Information Systems Management (Stockholm University).
-      I specialize in data collection, analysis, and visualization using Python and SQL. My focus is on transforming
-      raw data into actionable insights through automation and dashboard design.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">NumPy</div>
-      <div class="skill">Plotly</div>
-      <div class="skill">Dash</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Selenium</div>
-      <div class="skill">Git</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Tableau</div>
+  <section class="hero">
+    <h2>Data Engineer & BI Developer</h2>
+    <p>Building data-driven solutions with Python, dashboards, and automation.</p>
+    <div class="links">
+      <a href="https://github.com/YuliaShiyy" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/yan-shi-784820354/" target="_blank">LinkedIn</a>
+      <a href="mailto:yulia_shiyan@outlook.com">Email</a>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>LinkedIn Sweden Job Market Dashboard</h3>
-      <p><strong>Tech stack:</strong> Python, Selenium, Pandas, Plotly</p>
-      <p>
-        Built an automated data pipeline to scrape and analyze LinkedIn job postings across Sweden.
-        Processed and visualized over 2,000+ postings to uncover hiring trends, top employers, and
-        geographic patterns. Developed an interactive dashboard that supports data-driven career insights.
-      </p>
-      <p><a href="https://github.com/YuliaShiyy" target="_blank">View project on GitHub →</a></p>
+  <section id="projects" class="section">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>LinkedIn Job Analytics Dashboard</h4>
+        <p>Python-based ETL pipeline and interactive dashboard analyzing job trends and hiring patterns across Sweden using scraped LinkedIn data.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h4>Game Behavior Analysis Dashboard</h4>
+        <p>Player behavior analysis and retention tracking dashboard built with Python and data visualization libraries, focusing on engagement metrics and user segmentation.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h4>Data Warehouse (Coming Soon)</h4>
+        <p>Design and implementation of data warehouse models and ETL processes for structured analytical environments.</p>
+      </div>
+      <div class="card">
+        <h4>BPDI (Coming Soon)</h4>
+        <p>Business Process and Data Integration coursework project focusing on workflow automation and data consistency across systems.</p>
+      </div>
+      <div class="card">
+        <h4>System Integration (Coming Soon)</h4>
+        <p>Project demonstrating system interoperability through integration patterns and service-oriented architecture.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Player Retention & Behavior Analytics Dashboard</h3>
-      <p><strong>Tech stack:</strong> Python, SQL, Plotly, Dash</p>
-      <p>
-        Designed a data analytics workflow to examine player lifecycle, retention, and engagement using
-        simulated game log data. Built an interactive dashboard with Dash to visualize retention curves
-        and behavioral cohorts, identifying key player segments to support retention optimization.
-      </p>
-      <p><a href="https://github.com/YuliaShiyy" target="_blank">View project on GitHub →</a></p>
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <div class="about">
+      <h4>English</h4>
+      <p>Hi, I’m <strong>Yan Shi</strong>, a data enthusiast with a background in <em>Strategic Information Systems Management</em> from Stockholm University and a bachelor’s degree in <em>Public Finance</em> from Zhongnan University of Economics and Law.</p>
+      <p>I have hands-on experience in <strong>data engineering, process automation, and BI dashboard development</strong> using Python. My main projects include the <em>LinkedIn Job Analytics Dashboard</em> and the <em>Game Behavior Analysis Dashboard</em>, both focusing on real-world data extraction, transformation, and visualization.</p>
+      <p>In addition, I possess solid academic foundations in <strong>Java programming</strong>, <strong>Data Warehousing</strong>, <strong>Business Process and Data Integration (BPDI)</strong>, and <strong>System Integration</strong>, and will soon publish course-related projects that demonstrate my understanding of data pipelines, integration architectures, and ETL workflows.</p>
+      <p>For my upcoming master’s thesis, I am interested in combining <strong>Explainable AI (XAI)</strong> with my data engineering and analytical skills, aiming to explore how interpretability can enhance transparency and decision support in intelligent data systems.</p>
     </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <p style="text-align:center;">📧 <a href="mailto:yulia_shiyan@outlook.com" style="color:#4e9eff;">yulia_shiyan@outlook.com</a></p>
   </section>
 
   <footer>
-    <p>📧 <a href="mailto:yulia_shiyan@outlook.com">yulia_shiyan@outlook.com</a></p>
-    <p>🔗 <a href="https://github.com/YuliaShiyy" target="_blank">GitHub: YuliaShiyy</a></p>
+    © 2025 Yan Shi | Built with ❤️ and GitHub Pages
   </footer>
 </body>
 </html>
+
