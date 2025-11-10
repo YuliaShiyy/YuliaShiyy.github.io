@@ -74,6 +74,20 @@
       text-align: center;
       font-size: 1.8rem;
       margin-bottom: 2rem;
+      color: #ffffff;
+    }
+
+    .subsection {
+      margin-bottom: 3rem;
+    }
+    .subsection h4 {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #9ecbff;
+      border-bottom: 1px solid #333;
+      display: inline-block;
+      padding-bottom: 0.4rem;
     }
 
     .projects {
@@ -91,9 +105,10 @@
     .card:hover {
       transform: translateY(-5px);
     }
-    .card h4 {
+    .card h5 {
       margin-top: 0;
       color: #fff;
+      font-size: 1.1rem;
     }
     .card p {
       color: #b0b0b0;
@@ -118,9 +133,6 @@
     .about {
       line-height: 1.6;
       color: #ddd;
-    }
-    .about h4 {
-      color: #fff;
     }
     footer {
       text-align: center;
@@ -153,62 +165,64 @@
 
   <section id="projects" class="section">
     <h3>Projects</h3>
-    <div class="projects">
-      <div class="card">
-        <h4>LinkedIn Job Analytics Dashboard</h4>
-        <p>Developed a data analytics dashboard that tracks hiring trends across Swedish industries using data extracted from LinkedIn.</p>
-        <p>Automated job data collection via Selenium-based web scraping and structured storage in CSV/SQL.</p>
-        <p>Implemented interactive visualizations in Python (Plotly, Dash) to analyze position demand, company distribution, and posting frequency.</p>
-        <p>Demonstrated strong skills in data engineering, automation, and BI visualization.</p>
-        <a href="https://github.com/YuliaShiyy/Linkedin-Jobs-Sweden-Pipeline">View on GitHub</a>
+
+    <!-- FEATURED PROJECTS -->
+    <div class="subsection">
+      <h4>Featured Data Engineering & Analytics Projects</h4>
+      <div class="projects">
+
+        <div class="card">
+          <h5>Data Warehouse</h5>
+          <p>Designed and implemented a dimensional data warehouse model to support decision-making in academic program and course management.</p>
+          <p>Applied Kimball’s dimensional modeling principles and built star-schema fact and dimension tables for program application, enrollment, and course registration.</p>
+          <p>Implemented ETL workflows using Python and SQL, handling Slowly Changing Dimensions and ensuring data consistency across time.</p>
+          <a href="https://github.com/YuliaShiyy/Data-Warehouse-Course-Project">View on GitHub</a>
+        </div>
+
+        <div class="card">
+          <h5>LinkedIn Job Analytics Dashboard</h5>
+          <p>Developed a data analytics dashboard tracking hiring trends across Swedish industries using data extracted from LinkedIn.</p>
+          <p>Automated job data collection via Selenium-based web scraping and structured storage in CSV/SQL.</p>
+          <p>Implemented interactive visualizations in Python (Plotly, Dash) to analyze position demand, company distribution, and posting frequency.</p>
+          <a href="https://github.com/YuliaShiyy/Linkedin-Jobs-Sweden-Pipeline">View on GitHub</a>
+        </div>
+
       </div>
-      <div class="card">
-        <h4>Game Behavior Analysis Dashboard</h4>
-        <p>Designed a game behavior analytics dashboard to explore player engagement, retention, and in-game event correlations.</p>
-        <p>Processed and aggregated gameplay data using Python (Pandas, NumPy) and visualized behavioral patterns with Plotly/Dash.</p>
-        <p>Implemented metrics such as retention rate, session duration, and purchase frequency to evaluate player activity cycles.</p>
-        <p>Demonstrated practical competence in data analysis, visualization, and user behavior interpretation.</p>
-        <a href="https://github.com/YuliaShiyy/GameDataAnalyze">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h4>Data Warehouse</h4>
-        <p>Designed and implemented a dimensional data warehouse model to support decision-making in academic program and course management.</p>
-        <p>Applied Kimball’s dimensional modeling principles and built star-schema fact and dimension tables for program application, enrollment, and course registration.</p>
-        <p>Implemented ETL workflows using Python and SQL, handling Slowly Changing Dimensions and ensuring data consistency across time.</p>
-        <p>Demonstrated practical skills in data integration, warehousing, and analytical schema design.</p>
-        <a href="https://github.com/YuliaShiyy/Data-Warehouse-Course-Project">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h4>Multi-User Chat System</h4>
-        <p>Engineered a robust, multithreaded Java Socket server from scratch to power a C/S instant messaging application.</p>
-        <p>Implemented a thread-safe architecture using ConcurrentHashMap to safely manage concurrent client connections.</p>
-        <p>Solved critical networking bugs, including StreamCorruptedException and SocketException from disconnects, to ensure high server availability and prevent 100% CPU usage loops.</p>
-        <p>The system supports core features like 1-to-1 private chat, group broadcasts, real-time online user lists, and file transfers.</p>
-        <a href="https://github.com/YuliaShiyy/Java-Multi-User-Chat-System">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h4>Tank Game</h4>
-        <p>Implemented and enhanced a classic 2D tank battle game to apply and demonstrate core Java principles like object-oriented programming (OOP), multithreading, and GUI event handling.</p>
-        <p>Designed and built the complete game logic, including player controls, enemy AI, collision detection, and animated graphics using the Java Swing library.</p>
-        <p>Engineered a persistence feature using Java File I/O to save and load game progress. Proactively refactored the initial tutorial code to resolve concurrency bugs and add new features like multi-shot capability and infinite enemy spawning.</p>
-        <p>Demonstrated practical skills in core Java development, object-oriented design, concurrent programming, and GUI application structure.</p>
-        <a href="https://github.com/YuliaShiyy/TankGame-v1.0">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h4>BPDI</h4>
-        <p>Modeled, simulated, and redesigned a customer onboarding and fraud investigation process from a manual As-Is system to an automated To-Be model.</p>
-        <p>Built Petri Net and BPMN models, performed process simulation (WoPeD, BIMP, Trisotech), and applied redesign patterns such as automation, parallelism, and control relocation.</p>
-        <p>Conducted process mining using PM4Py to evaluate performance improvements over multiple years.</p>
-        <p>Demonstrated end-to-end expertise in process modeling, system integration, and performance optimization.</p>
-        <a href="https://github.com/YuliaShiyy/Business-Process-and-Data-Integration-BPDI-Project">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h4>System Integration</h4>
-        <p>Designed and modeled a system integration solution to automate the routing of customer complaints across multiple departments.</p>
-        <p>Developed a symbolic architecture and BPMN workflow connecting heterogeneous systems (ORB, SAP, in-house HR) through BizTalk Server middleware.</p>
-        <p>Defined XML message schemas and transformation logic to ensure reliable data exchange between systems.</p>
-        <p>Demonstrated expertise in enterprise integration, process automation, and system interoperability.</p>
-        <a href="https://github.com/YuliaShiyy/System-Integration-SYSTINT-Project">View on GitHub</a>
+    </div>
+
+    <!-- SUPPORTING PROJECTS -->
+    <div class="subsection">
+      <h4>Supporting Engineering & Analytical Projects</h4>
+      <div class="projects">
+
+        <div class="card">
+          <h5>Multi-User Chat System</h5>
+          <p>Engineered a robust, multithreaded Java Socket server from scratch to power a C/S instant messaging application.</p>
+          <p>Implemented a thread-safe architecture using ConcurrentHashMap to safely manage concurrent client connections.</p>
+          <a href="https://github.com/YuliaShiyy/Java-Multi-User-Chat-System">View on GitHub</a>
+        </div>
+
+        <div class="card">
+          <h5>Game Behavior Analysis Dashboard</h5>
+          <p>Designed a game behavior analytics dashboard to explore player engagement, retention, and in-game event correlations.</p>
+          <p>Processed and aggregated gameplay data using Python (Pandas, NumPy) and visualized behavioral patterns with Plotly/Dash.</p>
+          <a href="https://github.com/YuliaShiyy/GameDataAnalyze">View on GitHub</a>
+        </div>
+
+        <div class="card">
+          <h5>BPDI / System Integration</h5>
+          <p>Modeled, simulated, and redesigned a customer onboarding and fraud investigation process from manual As-Is to automated To-Be models.</p>
+          <p>Built BPMN/Petri Net models, applied automation, and integrated multi-system data flows (BizTalk, SAP, HR system).</p>
+          <a href="https://github.com/YuliaShiyy/Business-Process-and-Data-Integration-BPDI-Project">View BPDI</a>
+          <a href="https://github.com/YuliaShiyy/System-Integration-SYSTINT-Project">View System Integration</a>
+        </div>
+
+        <div class="card">
+          <h5>Tank Game</h5>
+          <p>Implemented and enhanced a 2D tank battle game applying OOP, multithreading, and GUI event handling with Java Swing.</p>
+          <a href="https://github.com/YuliaShiyy/TankGame-v1.0">View on GitHub</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -216,11 +230,9 @@
   <section id="about" class="section">
     <h3>About Me</h3>
     <div class="about">
-      <h4>English</h4>
       <p>Hi, I’m <strong>Yan Shi</strong>, a data enthusiast with a background in <em>Strategic Information Systems Management</em> from Stockholm University and a bachelor’s degree in <em>Public Finance</em> from Zhongnan University of Economics and Law.</p>
-      <p>I have hands-on experience in <strong>data engineering, process automation, and BI dashboard development</strong> using Python. My main projects include the <em>LinkedIn Job Analytics Dashboard</em> and the <em>Game Behavior Analysis Dashboard</em>, both focusing on real-world data extraction, transformation, and visualization.</p>
-      <p>In addition, I possess solid academic foundations in <strong>Java programming</strong>, <strong>Data Warehousing</strong>, <strong>Business Process and Data Integration (BPDI)</strong>, and <strong>System Integration</strong>, and will soon publish course-related projects that demonstrate my understanding of data pipelines, integration architectures, and ETL workflows.</p>
-      <p>For my upcoming master’s thesis, I am interested in combining <strong>Explainable AI (XAI)</strong> with my data engineering and analytical skills, aiming to explore how interpretability can enhance transparency and decision support in intelligent data systems.</p>
+      <p>I have hands-on experience in <strong>data engineering, process automation, and BI dashboard development</strong> using Python. My projects demonstrate a full-stack data perspective: from ETL pipelines and data warehouses to real-world analytics dashboards.</p>
+      <p>For my upcoming master’s thesis, I am interested in combining <strong>Explainable AI (XAI)</strong> with my data engineering and analytical skills, aiming to enhance transparency and decision support in intelligent data systems.</p>
     </div>
   </section>
 
@@ -234,4 +246,3 @@
   </footer>
 </body>
 </html>
-
